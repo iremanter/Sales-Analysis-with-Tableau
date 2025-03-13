@@ -1,4 +1,4 @@
-# Tableau-Projects
+# SALES ANALYSIS
 
 Before performing the country, product and trend analysis the data should be understood well and data cleaning processes have been performed. Online Sales dataset, which is obtained from Kaggle with a title “Online Sales Dataset”, includes seventeen attributes, which are as follows:
 
