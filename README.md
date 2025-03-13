@@ -2,54 +2,53 @@
 
 “Online Sales Dataset”, includes seventeen attributes, which are as follows:
 
-● InvoiceNo: A unique identifier for each transaction.
-● StockCode: A unique code assigned to each product.
-● Description: A description of the product.
-● Quantity: The number of units sold.
-● InvoiceDate: The date and time when the transaction occurred.
-● UnitPrice: The price per unit of the product.
-● CustomerID: A unique identifier for each customer.
-● Country: The country where the transaction took place.
-● Discount: The discount applied to the transaction.
-● PaymentMethod: The method used for payment (e.g., Bank Transfer, PayPal).
-● ShippingCost: The cost incurred for shipping the product.
-● Category: The product category (Apparel, Electronics, Accessories, Furniture, Stationery).
-● SalesChannel: The channel of sales which indicates whether the sales occurred online or
+InvoiceNo: A unique identifier for each transaction.
+StockCode: A unique code assigned to each product.
+Description: A description of the product.
+Quantity: The number of units sold.
+InvoiceDate: The date and time when the transaction occurred.
+UnitPrice: The price per unit of the product.
+CustomerID: A unique identifier for each customer.
+Country: The country where the transaction took place.
+Discount: The discount applied to the transaction.
+PaymentMethod: The method used for payment (e.g., Bank Transfer, PayPal).
+ShippingCost: The cost incurred for shipping the product.
+Category: The product category (Apparel, Electronics, Accessories, Furniture, Stationery).
+SalesChannel: The channel of sales which indicates whether the sales occurred online or
 in-store.
-● ReturnStatus: Indicates whether the product was returned or not.
-● ShipmentProvider: The courier service handling the shipment (DHL, FedEx, Royal Mail, UPS)
-● WarehouseLocation: The location from which the product was shipped.
-● OrderPriority: The priority level assigned to the order (Low, Medium, High).
+ReturnStatus: Indicates whether the product was returned or not.
+ShipmentProvider: The courier service handling the shipment (DHL, FedEx, Royal Mail, UPS)
+WarehouseLocation: The location from which the product was shipped.
+OrderPriority: The priority level assigned to the order (Low, Medium, High).
 
 Key Performance Indicators (KPIs) has been defined. Calculated fields, sets, parameters, dynamic measures, and filters have been created using relevant formulas by using Tableau. 
 
 The additional attributes are described in detail below:
 
-● date: Extracts the date from the Invoice Date field.
-● Customer_ID_fixed: Cleans the Customer ID field by removing dots.
-● distinct_customer: Counts the number of distinct customers.
-● Category2: Assigns a new category to products based on their description.
-● Returned Count: Counts the number of returned items.
-● Units Sold: Calculates the total units sold by excluding returned items.
-● Revenue: Computes revenue by considering unit price, quantity sold, and discount.
-● Profit: Calculates profit by subtracting shipping costs from revenue.
-● Average Price: Computes the average price per unit sold.
-● Total Profit By Year: Calculates the total profit for each year.
-● Profit_Country: Computes the average profit per country.
-● Cumulative Percentage: Calculates the cumulative percentage of quantities sold.
-● Aggre-Level Overall Margin: Computes the overall profit margin at an aggregate level.
-● High Margin?: Classifies margins as above or below average based on a threshold.
-● revenue per dist customer: Calculates the revenue per distinct customer.
-● Exclude Revenue LOD: Computes revenue while excluding a specific description.
-● Measure Dynamic: Dynamically selects between revenue and quantity based on user input.
+date: Extracts the date from the Invoice Date field.
+Customer_ID_fixed: Cleans the Customer ID field by removing dots.
+distinct_customer: Counts the number of distinct customers.
+Category2: Assigns a new category to products based on their description.
+Returned Count: Counts the number of returned items.
+Units Sold: Calculates the total units sold by excluding returned items.
+Revenue: Computes revenue by considering unit price, quantity sold, and discount.
+Profit: Calculates profit by subtracting shipping costs from revenue.
+Average Price: Computes the average price per unit sold.
+Total Profit By Year: Calculates the total profit for each year.
+Profit_Country: Computes the average profit per country.
+Cumulative Percentage: Calculates the cumulative percentage of quantities sold.
+Aggre-Level Overall Margin: Computes the overall profit margin at an aggregate level.
+High Margin?: Classifies margins as above or below average based on a threshold.
+revenue per dist customer: Calculates the revenue per distinct customer.
+Exclude Revenue LOD: Computes revenue while excluding a specific description.
+Measure Dynamic: Dynamically selects between revenue and quantity based on user input.
 
 The detail explanation of the parameters and sets as follows:
 
-● Top X Products by Quantity Sold: The top X products are determined based on quantity sold, with the selectable range between 1 and 11.
-● Select Measure Name: Enables the user to choose between quantity or revenue as the measure to analyze.
-● EU Set: A predefined selection of European countries.
-● Description Set 2: Allows the user to select a number between 1 and 11 to display the top X
-products in descending order based on quantity sold.
+Top X Products by Quantity Sold: The top X products are determined based on quantity sold, with the selectable range between 1 and 11.
+Select Measure Name: Enables the user to choose between quantity or revenue as the measure to analyze.
+EU Set: A predefined selection of European countries.
+Description Set 2: Allows the user to select a number between 1 and 11 to display the top X products in descending order based on quantity sold.
 
 Dashbord 1: Country Analysis
 
@@ -103,4 +102,3 @@ After all three dashboards have been created, the story has been developed by us
 As a final step, the tableau file is converted from live to extract in order to publish it in the public tableau platform. The link of published tableau file above:
 
 https://public.tableau.com/app/profile/irem.anter/viz/VSTT-Assignment2/SalesAnalysis?publish=yes
-
