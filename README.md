@@ -21,8 +21,7 @@ in-store.
 ● WarehouseLocation: The location from which the product was shipped.
 ● OrderPriority: The priority level assigned to the order (Low, Medium, High).
 
-Additionally, Key Performance Indicators (KPIs) has been defined. 
-Calculated fields, sets, parameters, dynamic measures, and filters have been created using relevant formulas by using Tableau. 
+Key Performance Indicators (KPIs) has been defined. Calculated fields, sets, parameters, dynamic measures, and filters have been created using relevant formulas by using Tableau. 
 
 The additional attributes are described in detail below:
 
@@ -44,7 +43,7 @@ The additional attributes are described in detail below:
 ● Exclude Revenue LOD: Computes revenue while excluding a specific description.
 ● Measure Dynamic: Dynamically selects between revenue and quantity based on user input.
 
-Moreover, the detail explanation of the parameters and sets as follows:
+The detail explanation of the parameters and sets as follows:
 
 ● Top X Products by Quantity Sold: The top X products are determined based on quantity sold, with the selectable range between 1 and 11.
 ● Select Measure Name: Enables the user to choose between quantity or revenue as the measure to analyze.
