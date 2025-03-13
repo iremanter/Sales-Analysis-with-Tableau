@@ -2,7 +2,7 @@
 
 “Online Sales Dataset”, includes seventeen attributes, which are as follows:
 
-● InvoiceNo: A unique identifier for each transaction.
+- InvoiceNo: A unique identifier for each transaction.
 ● StockCode: A unique code assigned to each product.
 ● Description: A description of the product.
 ● Quantity: The number of units sold.
