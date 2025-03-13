@@ -3,55 +3,54 @@
 “Online Sales Dataset”, includes seventeen attributes, which are as follows:
 
 - InvoiceNo: A unique identifier for each transaction.
-● StockCode: A unique code assigned to each product.
-● Description: A description of the product.
-● Quantity: The number of units sold.
-● InvoiceDate: The date and time when the transaction occurred.
-● UnitPrice: The price per unit of the product.
-● CustomerID: A unique identifier for each customer.
-● Country: The country where the transaction took place.
-● Discount: The discount applied to the transaction.
-● PaymentMethod: The method used for payment (e.g., Bank Transfer, PayPal).
-● ShippingCost: The cost incurred for shipping the product.
-● Category: The product category (Apparel, Electronics, Accessories, Furniture, Stationery).
-● SalesChannel: The channel of sales which indicates whether the sales occurred online or
-in-store.
-● ReturnStatus: Indicates whether the product was returned or not.
-● ShipmentProvider: The courier service handling the shipment (DHL, FedEx, Royal Mail, UPS)
-● WarehouseLocation: The location from which the product was shipped.
-● OrderPriority: The priority level assigned to the order (Low, Medium, High).
+- StockCode: A unique code assigned to each product.
+- Description: A description of the product.
+- Quantity: The number of units sold.
+- InvoiceDate: The date and time when the transaction occurred.
+- UnitPrice: The price per unit of the product.
+- CustomerID: A unique identifier for each customer.
+- Country: The country where the transaction took place.
+- Discount: The discount applied to the transaction.
+- PaymentMethod: The method used for payment (e.g., Bank Transfer, PayPal).
+- ShippingCost: The cost incurred for shipping the product.
+- Category: The product category (Apparel, Electronics, Accessories, Furniture, Stationery).
+- SalesChannel: The channel of sales which indicates whether the sales occurred online or in-store.
+- ReturnStatus: Indicates whether the product was returned or not.
+- ShipmentProvider: The courier service handling the shipment (DHL, FedEx, Royal Mail, UPS)
+- WarehouseLocation: The location from which the product was shipped.
+- OrderPriority: The priority level assigned to the order (Low, Medium, High).
 
 Key Performance Indicators (KPIs) has been defined. Calculated fields, sets, parameters, dynamic measures, and filters have been created using relevant formulas by using Tableau. 
 
 The additional attributes are described in detail below:
 
-● date: Extracts the date from the Invoice Date field.
-● Customer_ID_fixed: Cleans the Customer ID field by removing dots.
-● distinct_customer: Counts the number of distinct customers.
-● Category2: Assigns a new category to products based on their description.
-● Returned Count: Counts the number of returned items.
-● Units Sold: Calculates the total units sold by excluding returned items.
-● Revenue: Computes revenue by considering unit price, quantity sold, and discount.
-● Profit: Calculates profit by subtracting shipping costs from revenue.
-● Average Price: Computes the average price per unit sold.
-● Total Profit By Year: Calculates the total profit for each year.
-● Profit_Country: Computes the average profit per country.
-● Cumulative Percentage: Calculates the cumulative percentage of quantities sold.
-● Aggre-Level Overall Margin: Computes the overall profit margin at an aggregate level.
-● High Margin?: Classifies margins as above or below average based on a threshold.
-● revenue per dist customer: Calculates the revenue per distinct customer.
-● Exclude Revenue LOD: Computes revenue while excluding a specific description.
-● Measure Dynamic: Dynamically selects between revenue and quantity based on user input.
+- date: Extracts the date from the Invoice Date field.
+- Customer_ID_fixed: Cleans the Customer ID field by removing dots.
+- distinct_customer: Counts the number of distinct customers.
+- Category2: Assigns a new category to products based on their description.
+- Returned Count: Counts the number of returned items.
+- Units Sold: Calculates the total units sold by excluding returned items.
+- Revenue: Computes revenue by considering unit price, quantity sold, and discount.
+- Profit: Calculates profit by subtracting shipping costs from revenue.
+- Average Price: Computes the average price per unit sold.
+- Total Profit By Year: Calculates the total profit for each year.
+- Profit_Country: Computes the average profit per country.
+- Cumulative Percentage: Calculates the cumulative percentage of quantities sold.
+- Aggre-Level Overall Margin: Computes the overall profit margin at an aggregate level.
+- High Margin?: Classifies margins as above or below average based on a threshold.
+- revenue per dist customer: Calculates the revenue per distinct customer.
+- Exclude Revenue LOD: Computes revenue while excluding a specific description.
+- Measure Dynamic: Dynamically selects between revenue and quantity based on user input.
 
 The detail explanation of the parameters and sets as follows:
 
-● Top X Products by Quantity Sold: The top X products are determined based on quantity sold, with the selectable range between 1 and 11.
-● Select Measure Name: Enables the user to choose between quantity or revenue as the measure to analyze.
-● EU Set: A predefined selection of European countries.
-● Description Set 2: Allows the user to select a number between 1 and 11 to display the top X
+- Top X Products by Quantity Sold: The top X products are determined based on quantity sold, with the selectable range between 1 and 11.
+- Select Measure Name: Enables the user to choose between quantity or revenue as the measure to analyze.
+- EU Set: A predefined selection of European countries.
+- Description Set 2: Allows the user to select a number between 1 and 11 to display the top X
 products in descending order based on quantity sold.
 
-Dashbord 1: Country Analysis
+**Dashbord 1: Country Analysis**
 
 The Country Analysis Dashboard with detailed explanation, some business insights and strategy recommendations are below:
 
@@ -65,7 +64,7 @@ The fourth chart, “Order Priority Across Countries”, shows both quantity sol
 
 In the last chart, “Margin Analysis by Product Category in Countries”, x-axis has been divided by EU Countries, and each country divided into products. Y-axis represents the computed profit margin at an aggregate level and the values range from 0 to slightly above 1, showing relative profitability. While blue bars indicate products with an overall margin at or below the threshold, orange bars highlight products with a higher-than-average margin within each country. This classification helps determine which product categories are performing better in terms of profit. Most product categories maintain a similar profit margin across countries. Some products, such as USB Cables and White Mugs, appear in orange, indicating higher margins in those categories for certain countries. The chart enables to identify profitable products per country and supports decision making in sales strategies, price adjustments, and inventory prioritization.
 
-Dashboard 2: Product Analysis
+**Dashboard 2: Product Analysis**
 
 The Product Analysis Dashboard with detailed explanation, some business insights and strategy recommendations are below:
 
@@ -79,7 +78,7 @@ The fifth chart, “Dual Axis Chart Between Revenue and Quantity for Each Catego
 
 The last chart, “Revenue Based on Product & Category”, is showing revenue per product within each product and category. While creating this horizontal bar chart, Level of Detail (LOD) technique has been applied. LOD (Levels of Detail) technology, initially introduced by Clark in 1976, is dedicated to expediting rendering processes by simplifying the level of detail in a model. More specifically, this technology allocates rendering resources for objects based on their positions and significance within the display environment. It achieves efficient rendering operations by reducing the number of facets and level of detail for less significant objects (Gong et al., 2024). The "Exclude Revenue LOD" field has been created, as explained above previously. This calculated field excludes product names and enables users to analyze data by category.
 
-Dashboard 3: Trend Analysis
+**Dashboard 3: Trend Analysis**
 
 The Trend Analysis Dashboard with detailed explanation, some business insights and strategy recommendations are below:
 
@@ -93,10 +92,10 @@ The fourth graph, “Cumulative Profit Over the Years”, is again an area chart
 In the fifth graph, “ Monthly Shipping Cost Trends”, shows how shipping costs fluctuate month-over-month from 2020 to 2024. Moreover, the peak points have been annotated to consider these months while planning the new strategy for the next period. Working with logistics partners to optimize shipping routes might help to decrease the shipping costs.
 The last graph, “Monthly Shipping Cost by Shipping Provider”, shows the percentage contribution of different shipping providers such as DHL, FedEx, Royal Mail, and UPS. It is shown that shipping providers contribute similarly to the overall shipping cost. To reduce the total shipping cost, discounts could be applied when a certain threshold amount is exceeded.
 
-INTERACTIVE DASHBOARDS: 
+**INTERACTIVE DASHBOARDS:**
 After designing the dashboards, some actions such as filters and highlights have been added to each dashboard. Therefore, all dashboards became user-friendly and interactive.
 
-STORY:
+**STORY:**
 
 After all three dashboards have been created, the story has been developed by using Tableau’s story feature. The story consists of three sheets, representing each dashboard which are “Countries”, “Products”, and “Trends”.
 
