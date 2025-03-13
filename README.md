@@ -1,6 +1,6 @@
 # SALES ANALYSIS
 
-Before performing the country, product and trend analysis the data should be understood well and data cleaning processes have been performed. Online Sales dataset, which is obtained from Kaggle with a title “Online Sales Dataset”, includes seventeen attributes, which are as follows:
+“Online Sales Dataset”, includes seventeen attributes, which are as follows:
 
 ● InvoiceNo: A unique identifier for each transaction.
 ● StockCode: A unique code assigned to each product.
@@ -21,7 +21,10 @@ in-store.
 ● WarehouseLocation: The location from which the product was shipped.
 ● OrderPriority: The priority level assigned to the order (Low, Medium, High).
 
-Additionally, Key Performance Indicators (KPIs) has been defined. calculated fields, sets, parameters, dynamic measures, and filters have been created using relevant formulas by using Tableau. The additional attributes are described in detail below:
+Additionally, Key Performance Indicators (KPIs) has been defined. 
+Calculated fields, sets, parameters, dynamic measures, and filters have been created using relevant formulas by using Tableau. 
+
+The additional attributes are described in detail below:
 
 ● date: Extracts the date from the Invoice Date field.
 ● Customer_ID_fixed: Cleans the Customer ID field by removing dots.
@@ -77,7 +80,9 @@ The fifth chart, “Dual Axis Chart Between Revenue and Quantity for Each Catego
 
 The last chart, “Revenue Based on Product & Category”, is showing revenue per product within each product and category. While creating this horizontal bar chart, Level of Detail (LOD) technique has been applied. LOD (Levels of Detail) technology, initially introduced by Clark in 1976, is dedicated to expediting rendering processes by simplifying the level of detail in a model. More specifically, this technology allocates rendering resources for objects based on their positions and significance within the display environment. It achieves efficient rendering operations by reducing the number of facets and level of detail for less significant objects (Gong et al., 2024). The "Exclude Revenue LOD" field has been created, as explained above previously. This calculated field excludes product names and enables users to analyze data by category.
 
-Dashboard 3: The Trend Analysis Dashboard with detailed explanation, some business insights and strategy recommendations are below:
+Dashboard 3: Trend Analysis
+
+The Trend Analysis Dashboard with detailed explanation, some business insights and strategy recommendations are below:
 
 The first graph, “Variation of Revenue Across Quarters in Five Years for Each EU Country”, is showing revenue trends per quarter for EU countries over five years. Different patterns across countries indicate revenue fluctuations based on seasonal demand, economic conditions, or regional factors. Some EU countries show stable revenue trends, while others experience more variability. The reason behind it can be different consumer behavior or market conditions. Focusing on regions with inconsistent revenue trends and strengthening Q4 marketing strategies can be applied.
 
@@ -95,11 +100,6 @@ After designing the dashboards, some actions such as filters and highlights have
 STORY:
 
 After all three dashboards have been created, the story has been developed by using Tableau’s story feature. The story consists of three sheets, representing each dashboard which are “Countries”, “Products”, and “Trends”.
-
-There are several limitations, such as missing data, which were dropped before the analysis. Additionally, there was some inconsistent data, such as the category field, which did not match the product names and needed to be redefined. Moreover, if the dataset included attributes related to customers, a customer behavior analysis could be conducted. This would enable more specific and targeted marketing strategies.
-
-Additionally, using static data limits real-time decision making and the dataset may lack detailed information, which is restricting deeper analysis. Performance issues can occur with large datasets and dashboard performance may be slow. Also, existing visualizations may have limited interactivity, so extracting specific insights might be more difficult.
-To increase the effectiveness of dashboards, integrating real-time data can provide more dynamic insights. In addition to this, applying advanced analytics like predictive models and forecasting deepens the analysis. Finally, optimizing performance through the use of the Extract feature of Tableau and data indexing improves speed and responsiveness. Therefore, the dashboards could be more accurate, efficient, and useful for decision making.
 
 As a final step, the tableau file is converted from live to extract in order to publish it in the public tableau platform. The link of published tableau file above:
 
