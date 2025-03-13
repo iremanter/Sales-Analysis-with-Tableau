@@ -1,5 +1,9 @@
 # SALES ANALYSIS
 
+The tableau file is converted from live to extract in order to publish it in the public tableau platform. The link of published tableau file above:
+
+https://public.tableau.com/app/profile/irem.anter/viz/VSTT-Assignment2/SalesAnalysis?publish=yes
+
 “Online Sales Dataset”, includes seventeen attributes, which are as follows:
 
 - InvoiceNo: A unique identifier for each transaction.
@@ -98,7 +102,3 @@ After designing the dashboards, some actions such as filters and highlights have
 **STORY:**
 
 After all three dashboards have been created, the story has been developed by using Tableau’s story feature. The story consists of three sheets, representing each dashboard which are “Countries”, “Products”, and “Trends”.
-
-As a final step, the tableau file is converted from live to extract in order to publish it in the public tableau platform. The link of published tableau file above:
-
-https://public.tableau.com/app/profile/irem.anter/viz/VSTT-Assignment2/SalesAnalysis?publish=yes
